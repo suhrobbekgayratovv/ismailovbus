@@ -107,7 +107,7 @@
   .card p { color: var(--muted); font-size: .96rem; }
 
   /* =====================================================
-     5. YANGILIKLAR (Yangi qo'shilgan bo'lim)
+     5. YANGILIKLAR
      ===================================================== */
   #news { background: #f8fafc; }
   .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 40px; }
@@ -119,7 +119,7 @@
   .news-card p { color: var(--muted); font-size: .95rem; line-height: 1.5; }
 
   /* =====================================================
-     6. TRANSPORT (avtobus va mikroavtobus)
+     6. TRANSPORT
      ===================================================== */
   #fleet { background: var(--sky); }
   .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 50px; }
@@ -222,7 +222,6 @@
 <!-- ============ NAVIGATSIYA ============ -->
 <nav id="nav">
   <div class="container nav-in">
-    <!-- Kompaniya nomini shu yerda o'zgartiring -->
     <a href="#hero" class="logo"><i>🚌</i> Ismailov AVTOBUS</a>
     <ul class="menu" id="menu">
       <li><a href="#services">Xizmatlar</a></li>
@@ -241,10 +240,108 @@
   <div class="container hero-grid">
     <div>
       <div class="chip reveal"><b></b> Har kuni buyurtmalar qabul qilinadi</div>
-      <h1 class="reveal d1">Qulay va xavfsiz
+      <h1 class="reveal d1">Qulay va xavfsiz <span>safar</span> — bizdan</h1>
+      <p class="reveal d2">Avtobus va mikroavtobus xizmatlari: shaharlararo qatnov, sayohat, to'y va tadbirlar, korxona xodimlarini tashish. Vaqtida, toza va ishonchli.</p>
+      <div class="hero-btns reveal d3">
+        <a href="#contact" class="btn btn-accent">Buyurtma berish →</a>
+        <a href="#fleet" class="btn btn-outline">Transportni ko'rish</a>
+      </div>
+    </div>
 
+    <!-- Avtobus rasmi (SVG) -->
+    <div class="hero-art reveal d2">
+      <svg class="bus-art" viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avtobus">
+        <rect x="20" y="40" width="470" height="150" rx="26" fill="#fff"/>
+        <rect x="20" y="130" width="470" height="30" fill="#1d5eea"/>
+        <rect x="20" y="160" width="470" height="30" rx="0" fill="#0a2a6b"/>
+        <path d="M20 160h470v4a26 26 0 0 1-26 26H46a26 26 0 0 1-26-26z" fill="#0a2a6b"/>
+        <g fill="#bcd4ff">
+          <rect x="50" y="62" width="62" height="52" rx="8"/><rect x="124" y="62" width="62" height="52" rx="8"/>
+          <rect x="198" y="62" width="62" height="52" rx="8"/><rect x="272" y="62" width="62" height="52" rx="8"/>
+          <rect x="346" y="62" width="62" height="52" rx="8"/>
+        </g>
+        <path d="M420 62h42a14 14 0 0 1 14 14v38H420z" fill="#8fb6ff"/>
+        <rect x="476" y="150" width="16" height="12" rx="4" fill="#ffb020"/>
+        <circle cx="120" cy="196" r="32" fill="#10182b"/><circle cx="120" cy="196" r="14" fill="#cfd8ec"/>
+        <circle cx="388" cy="196" r="32" fill="#10182b"/><circle cx="388" cy="196" r="14" fill="#cfd8ec"/>
+        <rect x="190" y="48" width="130" height="10" rx="5" fill="#ffb020"/>
+      </svg>
+    </div>
+  </div>
+  <div class="road"></div>
+</header>
 
+<!-- ============ RAQAMLAR ============ -->
+<div class="stats">
+  <div class="container">
+    <div class="stats-box reveal">
+      <div class="stat"><b>5</b><span>ta avtobus</span></div>
+      <div class="stat"><b>1</b><span>ta mikroavtobus</span></div>
+      <div class="stat"><b>20+</b><span>o'rinli avtobuslar</span></div>
+      <div class="stat"><b>24/7</b><span>buyurtma qabuli</span></div>
+    </div>
+  </div>
+</div>
 
+<!-- ============ XIZMATLAR ============ -->
+<section id="services">
+  <div class="container center">
+    <div class="eyebrow reveal">Xizmatlarimiz</div>
+    <h2 class="reveal d1">Sizga qanday safar kerak?</h2>
+    <p class="lead reveal d2">Qisqa yo'ldan tortib uzoq sayohatgacha — hammasiga tayyormiz.</p>
+    <div class="grid4" style="text-align:left">
+      <div class="card reveal"><div class="ico">🛣️</div><h3>Shaharlararo qatnov</h3><p>Viloyatlar va shaharlar o'rtasida qulay, vaqtida qatnov.</p></div>
+      <div class="card reveal d1"><div class="ico">🏞️</div><h3>Sayohat va ekskursiya</h3><p>Guruhlar, oila va do'stlar uchun sayohatlar.</p></div>
+      <div class="card reveal d2"><div class="ico">💍</div><h3>To'y va tadbirlar</h3><p>Mehmonlarni olib borish va qaytarish, bayramlar uchun.</p></div>
+      <div class="card reveal d3"><div class="ico">🏢</div><h3>Xodimlarni tashish</h3><p>Korxona va tashkilotlar uchun doimiy qatnov xizmati.</p></div>
+    </div>
+  </div>
+</section>
 
+<!-- ============ YANGILIKLAR ============ -->
+<section id="news">
+  <div class="container center">
+    <div class="eyebrow reveal">So'nggi xabarlar</div>
+    <h2 class="reveal d1">Yangiliklar va E'lonlar</h2>
+    <p class="lead reveal d2">Xizmatlarimiz, yangi yo'nalishlar va aksiyalar haqida ma'lumotlar.</p>
+    
+    <div class="news-grid" style="text-align:left">
+      <div class="news-card reveal">
+        <div class="news-content">
+          <span class="news-date">19 Oktyabr, 2026</span>
+          <h3>Kuzgi sayohatlar uchun chegirmalar!</h3>
+          <p>Tarixiy shaharlarimizga guruh bo'lib sayohat qiluvchilar uchun qulay narxlar hamda maxsus chegirmalar e'lon qilamiz.</p>
+        </div>
+      </div>
 
+      <div class="news-card reveal d1">
+        <div class="news-content">
+          <span class="news-date">15 Oktyabr, 2026</span>
+          <h3>Avtoparkimiz yangilandi</h3>
+          <p>Barcha avtobuslarimiz mavsumiy texnik ko'rikdan o'tkazildi va konditsioner tizimlari to'liq sozlandi.</p>
+        </div>
+      </div>
 
+      <div class="news-card reveal d2">
+        <div class="news-content">
+          <span class="news-date">10 Oktyabr, 2026</span>
+          <h3>24/7 Telegram orqali qulay buyurtma</h3>
+          <p>Endi saytimiz orqali to'g'ridan-to'g'ri Telegram orqali yo'nalish va sanani tanlab buyurtma berishingiz mumkin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRANSPORT ============ -->
+<section id="fleet">
+  <div class="container center">
+    <div class="eyebrow reveal">Transport parkimiz</div>
+    <h2 class="reveal d1">Avtobus va mikroavtobus</h2>
+    <p class="lead reveal d2">Odamlar soniga qarab eng mos transportni tanlang.</p>
+
+    <div class="grid2" style="text-align:left">
+      <div class="vehicle reveal">
+        <div class="v-top">
+          <h3>Avtobus</h3><small>Katta guruhlar uchun</small>
+          <svg viewBox="0 0 320 120" aria-hidden="true"><rect x="10" y="14" width="296" height="74" rx="16" fill="#fff"/><rect x="10" y="62" width="296" height="14" fill="#8fb6ff"/><g fill="#bcd4ff"><rect x="26" y="26" width="38" height="28" rx="5"/><rect x="72" y
