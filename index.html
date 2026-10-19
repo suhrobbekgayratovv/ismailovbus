@@ -107,7 +107,19 @@
   .card p { color: var(--muted); font-size: .96rem; }
 
   /* =====================================================
-     5. TRANSPORT (avtobus va mikroavtobus)
+     5. YANGILIKLAR
+     ===================================================== */
+  #news { background: #f8fafc; }
+  .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 40px; }
+  .news-card { background: #fff; border: 1px solid #e3eaf8; border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.04); transition: transform .35s, box-shadow .35s; }
+  .news-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+  .news-content { padding: 24px; }
+  .news-date { font-size: .82rem; color: var(--blue); font-weight: 700; margin-bottom: 8px; display: block; text-transform: uppercase; }
+  .news-card h3 { font-size: 1.2rem; color: var(--navy-dark); margin-bottom: 10px; line-height: 1.35; }
+  .news-card p { color: var(--muted); font-size: .95rem; line-height: 1.5; }
+
+  /* =====================================================
+     6. TRANSPORT
      ===================================================== */
   #fleet { background: var(--sky); }
   .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 50px; }
@@ -126,7 +138,7 @@
   .price b { font-size: 1.1rem; color: var(--navy-dark); }
 
   /* =====================================================
-     6. NEGA BIZ
+     7. NEGA BIZ
      ===================================================== */
   .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 50px; }
   .why { display: flex; gap: 18px; padding: 26px; border-radius: var(--radius); background: #f6f9ff; transition: .3s; }
@@ -136,7 +148,7 @@
   .why p { color: var(--muted); font-size: .95rem; }
 
   /* =====================================================
-     7. QANDAY BUYURTMA QILISH
+     8. QANDAY BUYURTMA QILISH
      ===================================================== */
   #steps { background: linear-gradient(160deg, var(--navy-dark), var(--navy)); color: #fff; }
   #steps h2 { color: #fff; } #steps .lead { color: rgba(255,255,255,.75); } #steps .eyebrow { color: var(--accent); }
@@ -148,7 +160,7 @@
   .step p { color: rgba(255,255,255,.75); font-size: .96rem; }
 
   /* =====================================================
-     8. BUYURTMA FORMASI + ALOQA
+     9. BUYURTMA FORMASI + ALOQA
      ===================================================== */
   .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; margin-top: 50px; align-items: start; }
   .info { display: grid; gap: 16px; }
@@ -170,7 +182,7 @@
   .note { font-size: .82rem; color: var(--muted); text-align: center; }
 
   /* =====================================================
-     9. FOOTER va suzuvchi tugma
+     10. FOOTER va suzuvchi tugma
      ===================================================== */
   footer { background: var(--navy-dark); color: rgba(255,255,255,.7); padding: 44px 0; text-align: center; }
   footer .logo { justify-content: center; margin-bottom: 12px; }
@@ -180,12 +192,12 @@
   .float-tg svg { width: 28px; height: 28px; }
 
   /* =====================================================
-     10. RESPONSIVE
+     11. RESPONSIVE
      ===================================================== */
   @media (max-width: 960px) {
     section { padding: 72px 0; }
     .hero-grid, .contact-grid { grid-template-columns: 1fr; }
-    .grid4 { grid-template-columns: repeat(2, 1fr); }
+    .grid4, .news-grid { grid-template-columns: repeat(2, 1fr); }
     .grid3, .steps { grid-template-columns: 1fr; }
     .stats-box { grid-template-columns: repeat(2, 1fr); gap: 18px 0; }
     .stat:nth-child(2) { border: 0; }
@@ -199,7 +211,7 @@
     #hero { padding: 120px 0 100px; }
   }
   @media (max-width: 600px) {
-    .grid4, .grid2, .f2 { grid-template-columns: 1fr; }
+    .grid4, .grid2, .f2, .news-grid { grid-template-columns: 1fr; }
     form { padding: 24px 20px; }
   }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
@@ -210,10 +222,10 @@
 <!-- ============ NAVIGATSIYA ============ -->
 <nav id="nav">
   <div class="container nav-in">
-    <!-- Kompaniya nomini shu yerda o'zgartiring -->
     <a href="#hero" class="logo"><i>🚌</i> Ismailov AVTOBUS</a>
     <ul class="menu" id="menu">
       <li><a href="#services">Xizmatlar</a></li>
+      <li><a href="#news">Yangiliklar</a></li>
       <li><a href="#fleet">Transport</a></li>
       <li><a href="#why">Afzalliklar</a></li>
       <li><a href="#steps">Buyurtma</a></li>
@@ -260,7 +272,6 @@
 </header>
 
 <!-- ============ RAQAMLAR ============ -->
-<!-- Raqamlar: transport parkingizga mos -->
 <div class="stats">
   <div class="container">
     <div class="stats-box reveal">
@@ -287,6 +298,41 @@
   </div>
 </section>
 
+<!-- ============ YANGILIKLAR ============ -->
+<section id="news">
+  <div class="container center">
+    <div class="eyebrow reveal">So'nggi xabarlar</div>
+    <h2 class="reveal d1">Yangiliklar va E'lonlar</h2>
+    <p class="lead reveal d2">Xizmatlarimiz, yangi yo'nalishlar va aksiyalar haqida ma'lumotlar.</p>
+    
+    <div class="news-grid" style="text-align:left">
+      <div class="news-card reveal">
+        <div class="news-content">
+          <span class="news-date">19 Oktyabr, 2026</span>
+          <h3>Kuzgi sayohatlar uchun chegirmalar!</h3>
+          <p>Tarixiy shaharlarimizga guruh bo'lib sayohat qiluvchilar uchun qulay narxlar hamda maxsus chegirmalar e'lon qilamiz.</p>
+        </div>
+      </div>
+
+      <div class="news-card reveal d1">
+        <div class="news-content">
+          <span class="news-date">15 Oktyabr, 2026</span>
+          <h3>Avtoparkimiz yangilandi</h3>
+          <p>Barcha avtobuslarimiz mavsumiy texnik ko'rikdan o'tkazildi va konditsioner tizimlari to'liq sozlandi.</p>
+        </div>
+      </div>
+
+      <div class="news-card reveal d2">
+        <div class="news-content">
+          <span class="news-date">10 Oktyabr, 2026</span>
+          <h3>24/7 Telegram orqali qulay buyurtma</h3>
+          <p>Endi saytimiz orqali to'g'ridan-to'g'ri Telegram orqali yo'nalish va sanani tanlab buyurtma berishingiz mumkin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ TRANSPORT ============ -->
 <section id="fleet">
   <div class="container center">
@@ -295,7 +341,6 @@
     <p class="lead reveal d2">Odamlar soniga qarab eng mos transportni tanlang.</p>
 
     <div class="grid2" style="text-align:left">
-      <!-- Avtobus: o'rin soni va narx -->
       <div class="vehicle reveal">
         <div class="v-top">
           <h3>Avtobus</h3><small>Katta guruhlar uchun</small>
@@ -312,7 +357,6 @@
         </div>
       </div>
 
-      <!-- Mikroavtobus -->
       <div class="vehicle reveal d1">
         <div class="v-top">
           <h3>Mikroavtobus</h3><small>Kichik guruhlar va oilalar uchun</small>
@@ -374,7 +418,6 @@
 
     <div class="contact-grid">
       <div class="info reveal">
-        <!-- Telefon raqamlari -->
         <div class="row"><span class="ic">📞</span><span class="phones"><small>Qo'ng'iroq qiling</small>
           <a href="tel:+998909004117">+998 90 900 41 17</a>
           <a href="tel:+998901323272">+998 90 132 32 72</a>
@@ -440,7 +483,6 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   /* ---------- Buyurtma formasi: Telegramga tayyor xabar yuboradi ---------- */
-  // Telegram username'ni o'zgartirish kerak bo'lsa, shu yerni tahrirlang
   const TG_USER = 'gyrtvvs';
   document.getElementById('orderForm').addEventListener('submit', e => {
     e.preventDefault();
